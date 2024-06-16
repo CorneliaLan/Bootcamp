@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BootcampAngular.Server", "BootcampAngular.Server\BootcampAngular.Server.csproj", "{53BF84FC-63D3-458A-B8E9-3A5BCE900A7D}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "bootcampangular.client", "bootcampangular.client\bootcampangular.client.esproj", "{BF10332D-1519-46C6-A2A9-2968A4614F41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53BF84FC-63D3-458A-B8E9-3A5BCE900A7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53BF84FC-63D3-458A-B8E9-3A5BCE900A7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53BF84FC-63D3-458A-B8E9-3A5BCE900A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53BF84FC-63D3-458A-B8E9-3A5BCE900A7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF10332D-1519-46C6-A2A9-2968A4614F41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF10332D-1519-46C6-A2A9-2968A4614F41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF10332D-1519-46C6-A2A9-2968A4614F41}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BF10332D-1519-46C6-A2A9-2968A4614F41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF10332D-1519-46C6-A2A9-2968A4614F41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF10332D-1519-46C6-A2A9-2968A4614F41}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A02561D2-AAE3-4C65-B6F5-42A34C8AF898}
+	EndGlobalSection
+EndGlobal

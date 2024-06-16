@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular App Anleitung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: white;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: maroon;
+        }
+
+        h1 {
+            border-bottom: 2px solid #c3002f;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        button.copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 15px;
+            background-color: maroon;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+        }
+
+        a {
+            color: #1976d2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Installation einer Angular-Webapp in Visual Studio Code / Visual Studio</h1>
+
+    <h2>1. Visual Studio Code / Visual Studio und Node.js installieren</h2>
+
+    <h3>Visual Studio Code</h3>
+    <ul>
+        <li>Besuche die offizielle <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code Webseite</a> und lade den Installer für dein Betriebssystem herunter.</li>
+        <li>Installiere Visual Studio Code, indem du dem Installationsassistenten folgst.</li>
+    </ul>
+
+    <h3>Visual Studio</h3>
+    <ul>
+        <li>Besuche die offizielle <a href="https://visualstudio.microsoft.com/" target="_blank">Visual Studio Webseite</a> und lade den Installer für dein Betriebssystem herunter.</li>
+        <li>Wähle bei der Installation die benötigten Workloads (z.B. "ASP.NET and web development").</li>
+        <li>Installiere Visual Studio, indem du dem Installationsassistenten folgst.</li>
+    </ul>
+
+    <h3>Node.js und npm</h3>
+    <ul>
+        <li>Besuche die offizielle <a href="https://nodejs.org/" target="_blank">Node.js Webseite</a> und lade die LTS-Version für dein Betriebssystem herunter.</li>
+        <li>Installiere Node.js, indem du dem Installationsassistenten folgst. npm wird automatisch mitinstalliert.</li>
+    </ul>
+
+    <h2>2. Im IDE Terminal folgende Befehle ausführen</h2>
+
+    <h3>Visual Studio Code</h3>
+    <h4>Windows, macOS und Linux:</h4>
+    <ol>
+        <li>
+            Öffne das AngularBootcampApp Projekt über den Ordner mit VSCode
+        </li>
+        <li>
+            Terminal des Clients in Visual Studio Code öffnen
+            <ul>
+                <li>Öffne Visual Studio Code.</li>
+                <li>Gehe zu <em>View &gt; Terminal</em> oder drücke <em>Ctrl + `</em> (Windows/Linux) oder <em>Cmd + `</em> (macOS).</li>
+            </ul>
+        </li>
+        <li>
+            Node.js Version prüfen
+            <pre><code id="codenode">node -v</code><button class="copy-btn" onclick="copyCode('codenode')">Copy</button></pre>
+        </li>
+        <li>
+            npm Version prüfen
+            <pre><code id="codenpm">npm -v</code><button class="copy-btn" onclick="copyCode('codenpm')">Copy</button></pre>
+        </li>
+        <li>
+            Angular CLI installieren
+            <pre><code id="codeAngular">npm install -g @angular/cli</code><button class="copy-btn" onclick="copyCode('codeAngular')">Copy</button></pre>
+        </li>
+        <li>
+            Anwendung starten
+            <pre><code id="codeServe">ng serve</code><button class="copy-btn" onclick="copyCode('codeServe')">Copy</button></pre>
+            Das erste Mal starten dauert immer etwas.<br /><br />
+
+            Falls folgender Fehler auftritt:
+            <pre><code>ng:Die Datei kann nicht geladen werden, da die Ausführung von Skripts auf diesem System deaktiviert ist...</code></pre>
+            Im Terminal:<br />
+            Dropdown der Powershell öffnen und Eingabeaufforderung/Commandprompt auswählen.
+        </li>
+    </ol>
+
+    <h3>Visual Studio</h3>
+    <h4>Windows und Linux:</h4>
+    <ol>
+        <li>
+            Node.js Tools für Visual Studio installieren
+            <ul>
+                <li>Stelle sicher, dass die "Node.js development"-Workload bei der Installation von Visual Studio ausgewählt ist. Andernfalls kannst du diese über den Visual Studio Installer nachträglich hinzufügen.</li>
+            </ul>
+        </li>
+        <li>
+            Terminal des Clients im Projekt öffnen
+            <ul>
+                <li>Führe die AngularBootcampApp.sln mit Visual Studio aus.</li>
+                <li>Gehe zu <em>View &gt; Terminal</em> oder drücke <em>Ctrl + `</em> (Windows/Linux).</li>
+            </ul>
+        </li>
+        <li>
+            Node.js Version prüfen
+            <pre><code id="codenode">node -v</code><button class="copy-btn" onclick="copyCode('codenode')">Copy</button></pre>
+        </li>
+        <li>
+            npm Version prüfen
+            <pre><code id="codenpm">npm -v</code><button class="copy-btn" onclick="copyCode('codenpm')">Copy</button></pre>
+        </li>
+        <li>
+            Angular CLI installieren
+            <pre><code id="codeIAngular">npm install -g @angular/cli</code><button class="copy-btn" onclick="copyCode('codeIAngular')">Copy</button></pre>
+        </li>
+        <li>
+            Anwendung starten<br />
+            Es gibt mehrere Möglichkeiten den Code zu starten:<br />
+            <pre><code id="codeServe">ng serve</code><button class="copy-btn" onclick="copyCode('codeServe')">Copy</button></pre>
+            Falls folgender Fehler auftritt:
+            <pre><code>ng:Die Datei kann nicht geladen werden, da die Ausführung von Skripts auf diesem System deaktiviert ist...</code></pre>
+            Im Terminal:<br />
+            Dropdown der Powershell öffnen und Eingabeaufforderung/Commandprompt auswählen.<br />
+            <br />
+            oder <br />
+            beim Starten Button das DropDownMenü öffnen und konfigurieren auswählen<br />
+            Bei Startprojekt: Einzelnes Startprojekt auswählen und AngularApp1.Server wählen<br />
+            Übernehmen + Ok
+            Danach im DropDownMenü https_app auswählen und das Projekt starten.
+            Das erste Mal starten dauert immer etwas.
+        </li>
+    </ol>
+
+    <h2>Schritt 3: Erstellen einer neuen Component</h2>
+    <ol>
+        <li>
+            Öffnen Sie das Terminal (insofern Sie es geschlossen haben).<br /><br />
+            Es gibt zwei Schreibweisen für viele Kommandos:
+            <pre><code>ng generate component name</code></pre>
+            <pre><code>ng g c name</code></pre>
+            <br />
+            Der Name unserer Component lautet todo.
+            <pre><code id="code1">ng g c todo</code><button class="copy-btn" onclick="copyCode('code1')">Copy</button></pre>
+            <br />
+            Diese ist in src/app/todo auffindbar.<br />
+            Jede Component besteht aus
+            <ul>
+                component.css           (Styling)
+            </ul>
+            <ul>
+                component.html          (Struktur)
+            </ul>
+            <ul>
+                component.spect.ts      (Tests)
+            </ul>
+            <ul>
+                component.ts            (Funktionalität und Logik)
+            </ul>
+            Diese Components finden sich auch in der app.component.<br />
+            In der app.component.html wird bestimmt welche Komponenten beim Starten der Component sichtbar sind.<br /><br />
+            Fügen Sie folgenden Code ein:
+            <pre><code id="imports.ts">import { Todo } from '../models/todo.module';
+import { TodoService } from '../services/todo.service';
+</code><button class="copy-btn" onclick="copyCode('imports.ts')">Copy</button></pre>
+            Falls die Imports nicht funktionieren sollten könnten diese auch von VSCode so erwartet werden:
+            <pre><code id="importsVS.ts">import { Todo } from '../../models/todo.module';
+import { TodoService } from '../../services/todo.service';</code><button class="copy-btn" onclick="copyCode('importsVS.ts')">Copy</button></pre>
+            <pre><code id="component.ts">todos: Todo[] = [];
+newTodoTitle: string = '';
+
+constructor(private todoService: TodoService) {
+    this.todos = this.todoService.getTodos();
+}
+
+addTodo(): void {
+    if (this.newTodoTitle.trim()) {
+    this.todoService.addTodo(this.newTodoTitle.trim());
+    this.newTodoTitle = '';
+    this.todos = this.todoService.getTodos();
+    }
+}
+
+deleteTodo(id: number): void {
+    this.todoService.deleteTodo(id);
+    this.todos = this.todoService.getTodos(); // Aktualisieren der To-Do-Liste
+}
+</code><button class="copy-btn" onclick="copyCode('component.ts')">Copy</button></pre>
+        </li>
+    </ol>
+
+    <h2>Schritt 4: Erstellen eines neuen Services</h2>
+    <ol>
+        <li>
+            Erstellen Sie einen neuen Ordner
+            <pre><code id="codeNav">cd src/app</code><button class="copy-btn" onclick="copyCode('codeNav')">Copy</button></pre>
+            <pre><code id="codeMKDir">mkdir services</code><button class="copy-btn" onclick="copyCode('codeMKDir')">Copy</button></pre>
+        </li>
+        <li>
+            Erstellen Sie einen Service im neuen Ordner
+            <pre><code>ng generate service services/name</code></pre>
+            <pre><code>ng g s services/name</code></pre>
+            Unser Service heißt ebenfalls todo.
+            <pre><code id="code2">ng g s services/todo</code><button class="copy-btn" onclick="copyCode('code2')">Copy</button></pre>
+        </li>
+        <li>
+            Fügen Sie folgenden Code im todo.service.ts ein:<br />
+            Visual Studio:
+            <pre><code id="code4">import { Todo } from '../models/todo.module';</code><button class="copy-btn" onclick="copyCode('code4')">Copy</button></pre>
+            Visual Studio Code:
+            <pre><code id="codeVSmodule">import { Todo } from '../../models/todo.module';</code><button class="copy-btn" onclick="copyCode('codeVSmodule')">Copy</button></pre>
+
+            <pre><code id="code5">private todos: Todo[] = [];
+private idCounter = 0;
+                    
+constructor() { }</code><button class="copy-btn" onclick="copyCode('code5')">Copy</button></pre>
+            <pre><code id="code6">getTodos(): Todo[] {
+return this.todos;
+}</code><button class="copy-btn" onclick="copyCode('code6')">Copy</button></pre>
+            <pre><code id="code7">addTodo(title: string): void {
+const newTodo: Todo = { id: this.idCounter++, title };
+this.todos.push(newTodo);
+}</code><button class="copy-btn" onclick="copyCode('code7')">Copy</button></pre>
+        </li>
+    </ol>
+
+    <h2>Schritt 5: Erstellen eines neuen Modules</h2>
+    <ol>
+        <li>
+            Erstellen Sie einen neuen Ordner
+            <pre><code id="codeNav">cd src/app</code><button class="copy-btn" onclick="copyCode('codeNav')">Copy</button></pre>
+            <pre><code id="codeModels">mkdir models</code><button class="copy-btn" onclick="copyCode('codeModels')">Copy</button></pre>
+        </li>
+        <li>
+            Wechseln Sie in den neuen Ordner
+            Erstellen Sie ein Module
+            <pre><code>ng generate module name</code></pre>
+            <pre><code>ng g m name</code></pre>
+            Unser Model heißt ebenfalls todo.
+            <pre><code id="codemodel">ng g m todo</code><button class="copy-btn" onclick="copyCode('codemodel')">Copy</button></pre>
+        </li>
+        <li>
+            Ersetzen Sie den Code des Modules
+            <pre><code id="code3">export interface Todo {
+    id: number;
+    title: string;
+}</code><button class="copy-btn" onclick="copyCode('code3')">Copy</button></pre>
+        </li>
+    </ol>
+
+    <h2>Schritt 6: app.module.ts</h2>
+    <ol>
+        <li>
+            Die app.module.ts ist der Kern der Angular-App. Diese wird allerdings nur erstellt wenn das Projekt mit Visual Studio erstellt wurde.<br />
+            In dieser Datei werden alle Importe vollzogen. Ist eine Componente nicht dort importiert kann diese auch nicht aufgerufen und genutzt werden.<br />
+            Folgende Imports sollten nun auch darin enthalten sein:
+            <pre><code id="code9">import { TodoComponent } from 'dein jeweiliger Path';
+import { TodoService } from 'dein jeweiliger Path';</code></pre>
+        </li>
+        <li>
+            Durch den Import können Sie nun TodoComponent und TodoService aufrufen.<br /><br />
+            TodoComponent wird bei declarations hinzugefügt.<br />
+            TodoService wird bei den providers hinzugefügt.
+        </li>
+    </ol>
+
+    <h2>Schritt 7: todo.component.html</h2>
+    <ol>
+        Ersetzen Sie den Inhalt der <code>todo.component.html</code>.
+        <pre><code id="code10">&lt;div id="1div"&gt;
+    &lt;h1&gt;ToDo-List&lt;/h1&gt;
+    &lt;input [(ngModel)]="newTodoTitle" placeholder="Neue Aufgabe"&gt;
+    &lt;button (click)="addTodo()"&gt;+&lt;/button&gt;
+&lt;/div&gt;
+</code><button class="copy-btn" onclick="copyCode('code10')">Copy</button></pre>
+    </ol>
+
+    <h2>Schritt 8: app.component.html</h2>
+    <ol>
+        Löschen Sie den Inhalt der <code>app.component.html</code> und fügen Sie den Aufruf des Selectors der <code>todo.component.ts</code> in &lt;&gt; ein.<br />
+        Durch diesen Aufruf wird die Todo-Component aufgerufen und sichtbar gemacht.
+    </ol>
+
+    <h2>Schritt 9: app.component.css</h2>
+    <ol>
+        Löschen Sie den Inhalt der <code>app.component.css</code>.
+    </ol>
+
+    <h2>Schritt 10: todo.component.css</h2>
+    <ol>
+        Die CSS-Datei ist für das Styling der Applikation verantwortlich. 
+        <pre><code id="code11">/* Default styles for desktop/fullscreen */
+:host {
+  display: block;
+  margin: 20px;
+}
+
+div {
+  margin-bottom: 5px;
+}
+
+h1 {
+  padding: 5px;
+  text-align: center;
+  color: darkred;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  width: calc(100% - 120px);
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+  color: darkred;
+  border-radius: 30px;
+  height: 50px;
+  width: 50px;
+  margin-top: 3px;
+}</code><button class="copy-btn" onclick="copyCode('code11')">Copy</button></pre>
+    </ol>
+
+    <h2>Schritt 11: app.module.ts</h2>
+    <ol>
+        Visual Studio:
+        <br />
+        Fügen Sie folgende Importe der
+        <code>app.module.ts</code> hinzu:
+        <pre><code id="code13">import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { TodoComponent } from './todo/todo.component';
+import { TodoService } from './services/todo.service';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+
+@NgModule({
+declarations: [
+    AppComponent,
+    TodoComponent,  
+],
+imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+],
+    providers: [TodoService, provideAnimationsAsync()],
+    bootstrap: [AppComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+})
+    export class AppModule { }
+</code><button class="copy-btn" onclick="copyCode('code13')">Copy</button></pre>
+        Diese Importe rufen Sie in Imports auf.
+
+        Für VSCode:
+        Fügen Sie folgende Importe der
+        <code>app.module.ts</code> hinzu:
+
+        <pre><code id="moduleVS.ts">import { NgModule } from '@angular/core';
+import { TodoService } from './services/todo.service';
+import { TodoComponent} from './todo/todo.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+
+@NgModule({
+declarations: [
+    AppComponent,
+    TodoComponent,
+],
+imports: [
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    BrowserModule,
+    AppRoutingModule
+],
+    providers:[TodoService, provideAnimationsAsync()],
+    bootstrap: [AppComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+})
+export class AppModule { }
+</code><button class="copy-btn" onclick="copyCode('moduleVS.ts')"</pre>
+    </ol>
+
+    <h2>Schritt 12: Anzeigen der Todos</h2>
+    <ol>
+        Fügen Sie folgenden Code in der <code>todo.component.html</code> hinzu:
+        <pre><code id="code15">&lt;ul&gt;
+    &lt;li *ngFor="let todo of todos"&gt;
+       &lt;!--Hier wird später Code hinzugefügt--&gt;
+       &lt;div class="title"&gt;&lt;p&gt;{{ todo.title }}&lt;/p&gt;&lt;/div&gt;
+       &lt;!--Hier wird als nächstes Code hinzugefügt--&gt;
+       &lt;!--Hier wird später Code hinzugefügt--&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code><button class="copy-btn" onclick="copyCode('code15')">Copy</button></pre>
+        Fügen Sie folgenden Code in der <code>todo.component.css</code> hinzu:
+        <pre><code id="code16">ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    width: calc(100% - 120px);
+    text-align: left;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+</code><button class="copy-btn" onclick="copyCode('code16')">Copy</button></pre>
+    </ol>
+
+    <h2>Schritt 13: Löschen einer Todo</h2>
+    <ol>
+        Fügen Sie folgenden Code in der <code>todo.service.ts</code> hinzu:
+        <pre><code id="copy8">deleteTodo(id: number): void {
+const index = this.todos.findIndex(todo => todo.id === id);
+if (index !== -1) {
+this.todos.splice(index, 1);
+    }
+}</code><button class="copy-btn" onclick="copyCode('copy8')">Copy</button></pre>
+        und erweitern Sie die <code>todo.component.html</code> an der richtigen Stelle um folgenden Code:
+        <pre><code id="code14">&lt;button class="delete" (click)="deleteTodo(todo.id)"&gt;
+    &lt;i class="material-icons"&gt;delete&lt;/i&gt;
+&lt;/button&gt;</code><button class="copy-btn" onclick="copyCode('code14')">Copy</button></pre>
+
+        Installieren Sie folgendes über das Client-Terminal:
+        <pre><code id="dafuck">ng add @angular/material</code><button class="copy-btn" onclick="copyCode('dafuck')">Copy</button></pre>
+    </ol>
+
+    <h2>Schritt 14: Flexboxen</h2>
+    <ol>
+        Fügen Sie um den Code innerhalb des &lt;li&gt;&lt;/li&gt; der <code>todo.component.html</code> folgenden Code hinzu:
+        <pre><code id="code17">&lt;div class="todo-container"&gt;
+&lt;!--Hier bleibt der bereits vorhandene Code inmitten des li--&gt;
+&lt;/div&gt;</code><button class="copy-btn" onclick="copyCode('code17')">Copy</button></pre>
+        Fügen Sie folgenden Code <code>todo.component.css</code> hinzu:
+        <pre><code id="code12">.todo-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+i.material-icons {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.title {
+  flex-grow: 1;
+}
+
+.title p {
+  margin: 0;
+}
+
+.delete {
+  cursor: pointer;
+  margin-left: 10px;
+}</code><button class="copy-btn" onclick="copyCode('code12')">Copy</button></pre>
+    </ol>
+
+    <h2>Flexibilität</h2>
+    <ol>
+        Die CSS lässt sich je nach Bildschirmgröße verändern. Um diese richtig anzeigen zu können wird <code>@media</code>(Breakpoint wird hinzugefügt) verwendet.<br />
+        Diesen Code können Sie hinzufügen um das Styling für Bildschirmgrößen bis zu einer maximalen Breite von 1024px;
+        <pre><code id="code18">/* Tablet styles */
+@media (max-width: 1024px) {
+    h1 {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    input {
+        width: calc(100% - 100px);
+        font-size: 14px;
+    }
+
+    button {
+        height: 40px;
+        width: 40px;
+    }
+
+    li {
+        width: calc(100% - 100px);
+        font-size: 14px;
+    }
+}</code><button class="copy-btn" onclick="copyCode('code18')">Copy</button></pre>
+    </ol>
+
+    <h2>Optionales selbstständiges Arbeiten</h2>
+    <ol>
+        Weitere Anpassung der CSS für einen neuen Breakpoint
+        <pre><code id="code19">/* Mobile styles */
+@media (max-width: 600px) {}</code><button class="copy-btn" onclick="copyCode('code19')">Copy</button></pre>
+    </ol>
+
+    <h2>Für die ganz schnellen</h2>
+    <ol>
+        <li>
+            Selbstständiges probieren mit Angular Material IO Components.<br />
+            Diese Components werden von Angular unterstützt.
+            <pre><code id="linkmaterial"> https://material.angular.io/components/categories</code><button class="copy-btn" onclick="copyCode('linkmaterial')">Copy</button></pre>
+            Hier findet ihr Erklärungen zu den gewählten Components, wie ihr die API aufruft sowie ihr diese in euren Code einbinden könnt.<br />
+            Bei den Beispielen könnt ihr die Ansicht auf Code wechseln und euch den Code dahinter genauer ansehen (TS, CSS und HTML).<br /><br />
+            <pre>Tipp: Die Imports der API der jeweiligen Component gehören in der <code>app.module.ts</code> hinzugefügt um diese nutzbar zu machen.</pre>
+            Bei Problemen gerne melden :)<br />
+            Viel Spaß
+        </li>
+    </ol>
+
+    <script>
+        function copyCode(id) {
+            var code = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(code).then(function () {
+
+            }, function (err) {
+                alert('Fehler beim Kopieren des Codes: ', err);
+            });
+        }
+    </script>
+
+</body>
+</html>
